@@ -1,3 +1,4 @@
+{ PROBLEMA DUBIOASA }
 (* Fişierul atestat.txt conţine pe prima linie un număr natural n (n≤100), iar pe *)
 (* a doua linie, separate prin câte un spaţiu, n numere naturale nenule, cu cel *)
 (* puțin 3 cifre și cel mult 9 cifre fiecare. Scrieţi programul C/C++ care *)
