@@ -24,6 +24,9 @@ var v :vector;
             [8, 2] = 28
           pentru a crea numarul folosim urmatoarea metoda
             numarul = numarul + cifra * (10 ^ locul_in_vector)
+        4) apoi ordinam vectorul  crescator ca sa putem afisa
+           cel mai mic numar 
+        5) se repeta punctu 3)
 }
 
 
@@ -67,7 +70,7 @@ while n > 0 do
     end;
 
 
-{ Sortam vectorul crescator  }
+{ Sortam vectorul decrescator  }
 for i := 1 to nr_cif - 1 do
     for j := i + 1 to nr_cif do
         if v[i] < v[j] then
@@ -86,7 +89,31 @@ for i := 1 to nr_cif do
     put := put * 10;
     end;
 
-{ Afisam rezultatul }
+{ Afisam rezultatul numaru cel mai mare  }
+writeln(n);
+
+
+
+{ Sortam vectorul crescator  }
+for i := 1 to nr_cif - 1 do
+    for j := i + 1 to nr_cif do
+        if v[i] > v[j] then
+            begin
+            aux := v[i];
+            v[i] := v[j];
+            v[j] := aux;
+            end;
+
+
+n := 0; { Vom creea numarul tot in <n> }
+put := 1; { Folosim <put>  pentru a stoca puterile lui 10 }
+for i := 1 to nr_cif do
+    begin
+    n := n + v[i]*put;
+    put := put * 10;
+    end;
+
+{ Afisam rezultatul numarul cel mai mic  }
 writeln(n);
 
 readln;
