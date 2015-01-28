@@ -1,3 +1,4 @@
+{ PROBLEMA DUBIOASA }
 (* Se citesc n (n<=100) numere naturale. Scrieți un program care determină și *)
 (* afişează cel mai mic număr care se poate forma cu cifra maximă a fiecărui număr *)
 (* citit. *)
