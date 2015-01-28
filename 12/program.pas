@@ -3,12 +3,11 @@
 (* numărului sunt distincte două câte două, respectiv, Conține cifre egale în caz *)
 (* contrar. *)
 program atestat_2015_12;
-type vector=array[1..5000] of string;
+type vector=array[1..1000000] of char;
 var v :vector;
-    n, i, j, prev :integer;
+    n, i :integer;
     f :text;
     ok :boolean;
-    prev_char :char;
 
 
 { Obs. Metoda de rezolvare
@@ -40,31 +39,12 @@ while not eoln(f) do
 ok := true; { Presupunem ca are cifre distincte }
 
 { verifivam daca cifrele sunt distincte doua cate doua }
-for i := 1 to n do
-    begin
-    for j := 1 to length(v[i]) do
+for i := 2 to n do
+    if v[i] = v[i-1] then
         begin
-        
-            
-        prev := j - 1; { Obtinem indicele elementului predecesor lui j}
-        if prev = 0 then { Daca elementul este 0 (adica j e 1 ) avem doua cazuri :}
-            if i = 1 then { I: daca suntem pe prima linie ca sa evitam o eroare
-                            vom lua elementul predecesoru ca urmatoru adica 2 }
-                prev_char := v[i][2]
-            else { Daca suntem pe alta linie atunci predecesorul este ultimul
-                    element al liniei i-1 }
-                prev_char := v[i-1][length(v[i-1])]
-        else
-            prev_char := v[i][prev];
-
-    
-        { Vedem daca elementul curent (j) este egal de predecesoru }
-        if v[i][j] = prev_char then
-            begin
-            ok := false;
-            end;
+        ok := false;
+        break;
         end;
-    end;
 
 if ok then
     writeln('Cifre distincte')
