@@ -1,3 +1,4 @@
+{ PROBLEMA DUBIOASA }
 (* Se citește din fișierul numar.txt un număr natural n, cu cel mult 100000 de *)
 (* cifre. Scrieți un program care afișează mesajul Cifre distincte dacă cifrele *)
 (* numărului sunt distincte două câte două, respectiv, Conține cifre egale în caz *)
