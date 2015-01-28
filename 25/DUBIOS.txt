@@ -1,0 +1,2 @@
+Nu se stie clar daca se va afisa numarul total de divizori, numarul divizorilor
+fiearui termen, sau numarul de elemente care au numarul dedivizori impar

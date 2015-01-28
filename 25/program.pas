@@ -1,3 +1,4 @@
+{ PROBLEMA DUBIOASA }
 (* Se consideră o matrice de dimensiuni m*n (m,n<=20)  cu elemente numere *)
 (* naturale. Scrieţi programul C/C++ care citește dimensiunile și elementele *)
 (* matricei și afişează pe ecran elementele matricei care au număr impar de *)
