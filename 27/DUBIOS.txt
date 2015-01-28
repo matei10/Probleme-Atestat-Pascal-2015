@@ -1,0 +1,3 @@
+Nu stim exact cum ar trebui sa arate programul de sortare si in ce mod sa
+sorta, "ordonam" adica
+
