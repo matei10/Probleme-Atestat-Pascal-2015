@@ -1,0 +1,13 @@
+Input:
+    n = 3
+    m = 2
+    matricea :
+        1 2
+        3 4
+        5 6
+Output:
+    3 1
+
+Pe prima coloana avem urmatoarele elemente prime : 1, 2, 3
+Pe a doua coloana avem urmatoarele elemente prime : 2
+
