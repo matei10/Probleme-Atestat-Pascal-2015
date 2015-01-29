@@ -19,7 +19,7 @@ var v :vector;
       le voi initializa cu 0
 }
 
-{ Program Atestat }
+{ Program Principal }
 begin
 write('n=');
 readln(n);
