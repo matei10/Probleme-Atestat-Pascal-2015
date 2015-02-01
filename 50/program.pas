@@ -84,7 +84,7 @@ s := s + ' ';
 (*     sfarsit := pos(' ', s); *)
 (*      *)
 (*     end; *)
-
+writel('Elena was here !')
 
 
 
