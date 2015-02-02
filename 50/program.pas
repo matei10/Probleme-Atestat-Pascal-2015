@@ -6,7 +6,8 @@ program atestat_2015_50;
 type vector=array[1..100] of string;
 var v :vector;
     s :string;
-    i, max_vocale, inceput, sfarsit :integer;
+    n, i, max_vocale, sfarsit :integer;
+    ok :boolean;
 
 { Obs. Metoda de rezolvare
      - citim textul in variabila 's'
@@ -79,23 +80,44 @@ while pos('  ', s) <> 0  do { cat timp gasimt doua spatii libere unu langa altu
 s := s + ' ';
 
 { punem fiecare cuvant in vectorul 'v' }
-(* while post(' ', s) <> 0 do *)
-(*     begin *)
-(*     sfarsit := pos(' ', s); *)
-(*      *)
-(*     end; *)
-writel('Elena was here !')
+n := 0;
+while pos(' ', s) <> 0 do
+    begin
+    sfarsit := pos(' ', s); { gasim sfarsitul unui cuvant }
+
+    n := n + 1; { numaram cuvantu }
+
+    v[n] := copy(s, 1, sfarsit-1); { adaugam cuvantul in vector }
+    { folosim 'sfarsit-1' deoarece nu vrem sa fie copiat si spatil }
+    
+    delete(s, 1, sfarsit); { scoatem cuvantul din string }
+    { folosim 'sfarsit' fara acel '-1' deoarece vrem sa fie sters si spatiul }
+    end;
 
 
+{ aflam care e numarul maxim de vocale pe care il are un cuvant din textul dat}
+max_vocale := 0;
+
+for i := 1 to n do
+    if nr_vocale(v[i]) > max_vocale then
+        max_vocale := nr_vocale(v[i]);
 
 
+{ afisam primul cuvant care are numarul de vocale egal cu numarul maxim de vocale }
+ok := false;  { nu am afisat nici un cuvant }
+i := 0 ;
 
+while not ok do { cat timp nu am afisat nici un cuvant }
+    begin
+    i := i + 1; { trecem la urmatorul cuvant }
+    if nr_vocale(v[i])  = max_vocale then { daca cuvantul are numarul de vocale
+                                        egal cu maximul }
+        begin
+        writeln(v[i]);
+        ok := true; { am afisat un cuvant }
+        end;
+    end;
 
-
-
-
-
-writeln(s);
 
 readln;
 end.
@@ -113,17 +135,12 @@ end.
             procedura deleteaza din sirul primit ca prim paramteru de pe
             pozitia primita ca al doilea parametru numaru de caractere
             specificate in al treilea parametru
+    *copy = primeste 3 parametri
+            1) stringul din care copieam
+            2) din ce pozitie din sir dorim sa copiam
+            3) cate caractere dorim sa copiam
+            functia retuneaza o copie a caracterelor din stringul primit ca
+            prim parametru, va copia de pe pozitia primica ca al doilea
+            parametru numarul de caractere specificate in al treilea parametru
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
