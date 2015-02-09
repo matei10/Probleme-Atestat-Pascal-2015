@@ -9,26 +9,35 @@
 program atestat_2015_2;
 var n, sum, k :longint;
 
+
+{ Obs. Metoda de rezolvare
+    - citim 'n'-ul
+    - cream produsul '1*2*3* ...k' pana cand daca am mai adauga
+      un factor produsului acesta ar depasi valoare lui 'n'
+    - verificam daca produsul obtinut este egal cu 'n' sau nu
+    - afisam mesaj corespunzator in functie de rezultatul testului 
+}
+
 { Program Principal }
 begin
-{ Citim n-ul }
+{ Citim 'n'-ul }
 write('n=');
 readln(n);
 
-{ Initializam suma  si k-ul}
-sum := 1; { In aceasta variabila vom calcula produsul 1*2*3*...k }
-k := 1; { Vom mari k-ul cu unu }
+{ Initializam suma  si 'k'-ul}
+sum := 1; { In aceasta variabila vom calcula produsul '1*2*3*...k' }
+k := 1; { Vom mari 'k'-ul cu unu }
 
 while sum < n do { Cat timp suma este strict mai mica decat numarul continuam
                     incrementarea  }
     begin
-    inc(k); { "inc(k)" e acelas lucrur cu "k := k + 1;" }
+    k := k + 1; { generam termenul urmator ar produsului }
     sum := sum * k; { Mai adaugam un termen sumei }
     end;
 
 { Avem doua cazuri :
-    - suma este egal cu n ;
-    - suma este mai mare decat n;
+    - suma este egal cu 'n' ;
+    - suma este mai mare decat 'n' ;
 }
 
 if sum = n then
@@ -42,5 +51,3 @@ else
 readln;
 
 end.
-    
-    
