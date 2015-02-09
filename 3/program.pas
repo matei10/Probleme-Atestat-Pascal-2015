@@ -12,18 +12,26 @@ var v :vector;
     f :text;
     n, max, min, i, nr_ap_max, nr_ap_min :integer;
 
+{ Obs. Metoda de rezolvare
+    - citim numere din fisier
+    - aflam minimul si maximul 
+    - numaral sa vedem de cate ori apare minimul si maximul 
+    - afisam rezultatele
+}
+
+
 
 { Program Principal }
 begin
 assign(f, 'valori.txt');
 reset(f);
 
-n := 0; { n-ul va tine numarul de valori din fisier }
+n := 0; { 'n'-ul va tine numarul de valori din fisier }
 
-while not eoln(f) do { eoln = End Of LiNe, cu alte cuvinte, cat timp nu am
+while not eoln(f) do { 'eoln' = End Of LiNe, cu alte cuvinte, cat timp nu am
                         ajuns la finalul linie }
     begin
-    inc(n);{ 'inc(n)' este acelas lucru cu 'n := n + 1' }
+    n := n + 1;
     read(f,v[n]);
     end;
 
