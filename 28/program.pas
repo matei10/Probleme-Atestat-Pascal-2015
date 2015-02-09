@@ -55,6 +55,12 @@ for i := 1 to n do
     readln(f);{ trecem pe linia urmatoare }
     end;
 
+{===========================================}
+{ daca se ia in considerare spatiul eliminam parantezele care inconjoara linia
+  urmatoare, care doar trece peste linia goala }
+{ readln(f); }
+{===========================================}
+
 { citim a doua matrice, b}
 for i := 1 to n do
     begin
