@@ -78,11 +78,8 @@ for i := 1 to n do
     { calculam fractia v[i] simplificata }
     aux := simplifica(v[i]);
 
-    { daca numaratoru e 1 afisam numitoru }
-    if aux.b = 1  then
-        writeln(aux.a)
-    else { daca numaratorul nu e 1 afisam fractia simplificata }
-        writeln(aux.a, '/', aux.b);
+    { afisam fractia simplificata }
+    writeln(aux.a, '/', aux.b);
     end;
 
 
