@@ -10,10 +10,10 @@ var v :vector;
 
 function prim(x :integer):boolean;
 { Parametri:
-    - x => numarul pe care il vom testa 
+    - 'x' -> numarul pe care il vom testa 
 Return:
-    - True => numarul este prim
-    - False => numarul nu este prim 
+    - 'True' -> numarul este prim
+    - 'False' -> numarul nu este prim 
 }
 var i :integer;
 begin
@@ -27,18 +27,18 @@ end;
 
 function prop(x :integer):boolean;
 { Parametri:
-    -x => numarul caruia pe care vom opera 
+    - 'x' -> numarul caruia pe care vom opera 
   Return
-    - True => daca numarul are pintre divizori maxim 
+    - 'True' -> daca numarul are pintre divizori maxim 
               un numar prim
-    - False => Daca are 2 sau mai multi divizori primi
+    - 'False' -> Daca are 2 sau mai multi divizori primi
 }
 var i, nr_div :integer;
 begin
 nr_div := 0;
 
-for i := 2 to x do { Pornim de la 2 deoarece 1 o sa fie mereu divizor prim }
-    if (x mod i = 0) and prim(x) then { Daca i e divizor si e prim }
+for i := 2 to x do { Pornim de la '2' deoarece '1' o sa fie mereu divizor prim }
+    if (x mod i = 0) and prim(x) then { Daca 'i' e divizor si e prim }
         inc(nr_div);                  { Il numaram }
 
 if nr_div <= 1 then
