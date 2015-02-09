@@ -1,1 +1,10 @@
-Problema lasa loc interpretarilor, este foarte dubioasa
+Problema lasa loc interpretarilor, este foarte dubioasa.
+In problema se cere sa 'citim un numar natural n', adica sa creeam acel numar
+in memorie, noi in pascal (cu ce am invatat la scoala) nu putem crea un numar
+cu maxim 100 000 cifre ( un numar creeat cu care sa putem opera adica, sa facem
+adunari scaderi )
+
+Programul nu creeaza un numar, el citeste cifrele ca pe niste caractere si
+lucreaza cu ele ca si cum ar fi caractere.
+
+
