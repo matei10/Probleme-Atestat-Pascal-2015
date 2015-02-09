@@ -75,19 +75,19 @@ begin
 write('n=');
 readln(n);
 
-{ Citim cele n elemente }
+{ Citim cele 'n' elemente }
 citire_vector;
 
-{ Citim k-ul }
+{ Citim 'k'-ul }
 write('k=');
 readln(k);
 
-nr := 0; { Initializam nr }
+nr := 0; { Initializam 'nr' }
 
 for i := 1 to n do 
     if contine_k(v[i]) AND prim(v[i]) then 
-    { daca v[i] contine cifra k si este prim atunci il numaram }
-        inc(nr); { "inc(nr)" este echivalent cu "nr := nr + 1" }
+    { daca 'v[i]' contine cifra 'k' si este prim atunci il numaram }
+        inc(nr); { 'inc(nr)' este echivalent cu 'nr := nr + 1' }
 
 writeln('nr=',nr);
 
