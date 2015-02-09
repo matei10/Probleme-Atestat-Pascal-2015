@@ -25,10 +25,10 @@ var v :vector;
 
 procedure descompunere(x :longint);
 { Parametri:
-    - x => numarul care va fi descompus in cifrele componente 
+    - 'x' -> numarul care va fi descompus in cifrele componente 
  Obs.
     Procedura descompune numarul in cifrele sale componente
-    apoi le numara in cev_cif
+    apoi le numara in 'cev_cif'
     }   
 var c :byte;
 begin
@@ -53,7 +53,7 @@ for i := 1 to n do
     readln(v[i]);
     end;
 
-{ Initializam vec_cif cu 0 }
+{ Initializam 'vec_cif' cu '0' }
 for i := 0 to 9 do
     vec_cif[i] := 0 ;
 
@@ -70,7 +70,7 @@ for i := 1 to 9 do
     if vec_cif[i] > max then
         max := vec_cif[i];
 
-{ Afisam cele mai mari cifre care apar de max ori }
+{ Afisam cele mai mari cifre care apar de 'max' ori }
 k := 0;
 
 for i := 9 downto 0 do
