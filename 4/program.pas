@@ -14,6 +14,14 @@ var v :vector;
     f, g :text;
     n, i, max, pre_max: longint;
 
+{ Obs. Metoda de rezolvare
+    - citim elementele din fisier
+    - aflam cel mai mare element si al doilea cel mai mare 
+      ( cand am gasit un element maxim, cel precedent va deveni "al doilea
+      cel mai mare" si il salvam si pe ala
+    - afisam rezultatul
+}
+
 { Program Principal }
 begin
 assign(f, 'unu.in');
@@ -22,7 +30,7 @@ assign(g, 'unu.out');
 reset(f);
 rewrite(g);
 
-{ Citim n-ul din fisier }
+{ Citim 'n'-ul din fisier }
 readln(f, n);
 
 { Citim cele n numere }
@@ -32,7 +40,7 @@ for i := 1 to n do
 close(f); { Inchidem fisierul }
 
 { Initializam max cu cea mai mare valoare dintre primele doua
-  (v[1] si v[2]) si pre_max cu cea mai mica                 }
+  ('v[1]' si 'v[2]') si pre_max cu cea mai mica                 }
 if v[1] > v[2] then
     begin
     max := v[1];
@@ -44,15 +52,15 @@ else
     pre_max := v[1];
     end;
 
-{ Parcurgem vectorul de la 3 la n sa vedem daca gasim valori mai mari ca max }
+{ Parcurgem vectorul de la '3' la 'n' sa vedem daca gasim valori mai mari ca 'max' }
 for i := 3 to n do
     if v[i] > max then
         begin
-        pre_max := max; { pre_max ia valoarea curenta a lui max }
-        max := v[i]; { max ia cea mai mare valoare gasita pana acum }
+        pre_max := max; { 'pre_max' ia valoarea curenta a lui 'max' }
+        max := v[i]; { 'max' ia cea mai mare valoare gasita pana acum }
         end;
 
-{ Scriem valorie in fisierul unu.out }
+{ Scriem valorie in fisierul 'unu.out' }
 write(g, max);
 write(g, ' ');
 write(g, pre_max);
