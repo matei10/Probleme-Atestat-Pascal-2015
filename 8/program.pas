@@ -8,13 +8,13 @@ var suma :integer;
     ok :boolean;
 
 { Obs. Metoda de rezolvare 
-    vom folosi in ok de tip booleanl ca sa vedem daca am gasit sau nu un numar
-    care are suma cifrelor egala cu a lui n 
+    vom folosi in 'ok' de tip booleanl ca sa vedem daca am gasit sau nu un numar
+    care are suma cifrelor egala cu a lui 'n' 
     
     o sa ne departam de n cu o unitate si o sa verificam daca numarul la care
     am ajuns respecta propietatea
 
-    folosim un k ca sa marim numarul de unitati, daca avem si n-k si n+k care
+    folosim un 'k' ca sa marim numarul de unitati, daca avem si 'n-k' si 'n+k' care
     respecta regula le afisam pe amandoua
 
     exemplu :
@@ -30,9 +30,9 @@ var suma :integer;
 
 function suma_cif(x :longint):integer;
 { Parametri:
-    - x => numarul caruia ii vom returna suma 
+    - 'x' -> numarul caruia ii vom returna suma 
   Return:
-    - integer => suma cefrelor 
+    - 'integer' -> suma cefrelor 
     }
 var c :integer;
 begin
