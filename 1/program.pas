@@ -9,12 +9,22 @@ type vector=array[1..100] of longint;
 var v :vector;
     n, k, nr, i :longint;
 
+
+{ Obs. Metoda de rezilvare
+    - citim 'n'-ul
+    - citim cele 'n' numere
+    - citim 'k'-ul
+    - parcurgem cele 'n' numere si verificam daca cifra 'k' se gaseste in
+      scrierea lor 
+        - daca da, numaram 
+}
+
 function prim(x :longint):boolean;
 { Parametri :
-    - x => numarul care va fi testat daca este prim sau nu ;
+    - x -> numarul care va fi testat daca este prim sau nu ;
   Return :
-    - True => daca numarul este prim ; 
-    - False => daca numarul nu este prim ;
+    - True -> daca numarul este prim ; 
+    - False -> daca numarul nu este prim ;
 }
 var i :longint;
 begin
@@ -30,10 +40,10 @@ end;
 
 function contine_k(x :longint):boolean;
 { Parametri:
-    - x => numarul in a carui cifre va cauta cifra k
+    - x -> numarul in a carui cifre va cauta cifra k
   Return:
-    - True => daca numarul contine cifra k in scrierea lui
-    - False => daca numarul nu contine cifra k in scrierea lui
+    - True -> daca numarul contine cifra k in scrierea lui
+    - False -> daca numarul nu contine cifra k in scrierea lui
 }
 var c :longint;
 begin
