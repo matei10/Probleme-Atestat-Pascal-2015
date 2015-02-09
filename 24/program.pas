@@ -21,6 +21,10 @@ var v :vector;
         citite au cifra maxima 9 eu in numarul final trebuie sa gasesc doi de
         9, unul de la x si unu de la y.
 
+    Completare:
+        Proful a spus ca putem trece peste creeare numarului si ne rezumam doar
+        la afisare, exact cum am facut in program
+
     Obs. Metoda de rezolvare
         - folosesc un subprogram care sa imi returneze cifra maxima
         - stochez cifrele maxime intr-un vector
