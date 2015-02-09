@@ -10,9 +10,29 @@ program atestat_2015_51;
 var s :string;
     i :integer;
 
+{ Obs.
+    Exemplul elimina litere de la dreapta la stanga desi se cere sa fie 
+    eliminate de la stanga la dreapta.
+    In exemplu:
+        'vacanta' devine 'vacant' -> a fost eliminat ultimul 'a'
+        'vacant' devine 'vacnt' -> a fost eliminat 'a'-ul dintre 'c' si 'n'
+
+    Un exemplu corect (care respecata enuntul) ar fi :
+        'vacanta' devine 'vcanta'
+        'vcanta' devine 'vcnta'
+        'vcnta' devine 'vcnt'
+
+        adisa se va afisa pentru cuvantul 'vacanta'
+        vcanta
+        vcnta
+        vcnt
+
+}
 { Obs. Metoda de rezolvare 
     - citim cuvantul in variabila 's' 
     - parcurgem toate caracterele cuvantului de la stanga la dreapta
+      (daca urmam exemplul) sau de la dreapta la stanga daca urmam
+      enuntul 
         - cand gasim o vocala o eliminam si afisam cuvantul 
 }
 
@@ -48,6 +68,8 @@ write('s=');
 readln(s);
 
 for i := length(s) downto 1 do { parcurgem caracterele de la stanta la dreapta }
+{ pentru a parcurge vectoul de la dreapta la stanga ( cum se cere in enunt )
+  vom inlocui 'length(s) downto 1' cu '1 to length(s)                   }
     if este_vocala(s[i]) then { daca caracterul e o vocala }
         begin
         delete(s, i, 1); { deletam vocala }
