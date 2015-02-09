@@ -11,10 +11,10 @@ var v :vector;
 
 function palindrom(x :longint):boolean;
 { Paramentri:
-    - x => numarul pe care il va verifica daca este palindrom 
+    - 'x' -> numarul pe care il va verifica daca este palindrom 
   Return:
-    - True => daca numarul e palindrom;
-    - False => daca numarul nu este palindrom;
+    - 'True' -> daca numarul e palindrom;
+    - 'False' -> daca numarul nu este palindrom;
     }
 var ogl, aux :longint;
     c :byte;
@@ -44,9 +44,9 @@ end;
 
 function nr_cif(x :longint):byte;
 { Parametri:
-    - x => numarul caruia ii vom afra numaul de cifre 
+    - 'x' -> numarul caruia ii vom afra numaul de cifre 
   Return :
-    - byte => numrul de cifre
+    - 'byte' -> numrul de cifre
     }
 begin
 nr_cif := 0; { Initializam numarul de cifre }
@@ -54,7 +54,7 @@ nr_cif := 0; { Initializam numarul de cifre }
 while x > 0 do
     begin
     { Numaram cifra }
-    inc(nr_cif); { 'inc(nr_cif)' <=> 'nr_cif := nr_cif + 1;' }
+    nr_cif := nr_cif + 1;
     { Elininam cifra }
     x := x div 10; 
     end;
