@@ -12,13 +12,13 @@ var a_uri, b_uri :vector;
 {Obs. Metoda de rezolvare 
     daca punem exemplu pe axa vedem ca intersectia toturol multimilor are
     capetele : 
-        -capatul din dreapta este maximul din toate valorile lui a
-        -capatul din stanga este minimul din toate valorile lui b
+        -capatul din dreapta este maximul din toate valorile lui 'a'
+        -capatul din stanga este minimul din toate valorile lui 'b'
     daca capatul din dreapta este mai mare decat capatul din stanga atunci
     intersectia este multimea vida 
 
-    problema se rezuma la gasirea maximul primului sir ( al a-urilor) si
-    minimul celui de al doilea sir( al b-urilor ) si verificam daca maximul
+    problema se rezuma la gasirea maximul primului sir ( al 'a'-urilor) si
+    minimul celui de al doilea sir( al 'b'-urilor ) si verificam daca maximul
     este mai mic decat minimul
     }
 
@@ -36,7 +36,7 @@ for i := 1 to n do
     writeln;
     end;
 
-{ Initializam min, max }
+{ Initializam 'min', 'max' }
 min := b_uri[1];
 max := a_uri[1];
 
