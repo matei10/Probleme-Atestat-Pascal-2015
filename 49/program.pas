@@ -31,6 +31,8 @@ var k, i :integer;
     daca folosim ca exemplu doar 'acdrt'  si 'ceftv' atunci o sa ni se afiseze
     2, dar folosind exemplu lor o sa ni se afiseze 'NU' deoarece ultima cifra
     nu respecta regula 
+
+    Profesoru a confirmat ca exemplul e prost.
 }
 
 { Obs. Metoda de rezolvare 
