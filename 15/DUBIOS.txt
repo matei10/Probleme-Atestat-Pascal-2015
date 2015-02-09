@@ -1,2 +1,5 @@
 Exemplu nu are legatura cu enuntul si este interpretabil, se pot face mai multe
-rezolvari diferite
+rezolvari diferite.
+Rezolvarea este corecta daca se respecta modificarile precizate de mine, dar
+proful a spus ca o sa lamureasca problema adica o cel mai probabil o sa ii
+schimbe enuntul si o sa modific problema cand primesc enunturile.
