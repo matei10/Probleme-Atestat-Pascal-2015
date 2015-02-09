@@ -32,10 +32,10 @@ var v :vector;
 
 function in_v(x :byte):boolean;
 { Parametri:
-    - x => cifra 
+    - 'x' -> cifra 
   Return:
-    - True => cifra se afla in vectorul <v>
-    - False => cifra nu se afla in vectorul <v>
+    - 'True' -> cifra se afla in vectorul <v>
+    - 'False' -> cifra nu se afla in vectorul <v>
 }
 var i :byte;
 begin
@@ -53,7 +53,7 @@ begin
 write('n=');
 readln(n);
 
-nr_cif := 0; { Sticam cate cifre sunt in <v> }
+nr_cif := 0; { Sticam cate cifre sunt in i'v' }
 
 { Adaugam cifrele in vector }
 while n > 0 do
@@ -81,8 +81,8 @@ for i := 1 to nr_cif - 1 do
             end;
 
 
-n := 0; { Vom creea numarul tot in <n> }
-put := 1; { Folosim <put>  pentru a stoca puterile lui 10 }
+n := 0; { Vom creea numarul tot in 'n' }
+put := 1; { Folosim 'put'  pentru a stoca puterile lui 10 }
 for i := 1 to nr_cif do
     begin
     n := n + v[i]*put;
@@ -105,8 +105,8 @@ for i := 1 to nr_cif - 1 do
             end;
 
 
-n := 0; { Vom creea numarul tot in <n> }
-put := 1; { Folosim <put>  pentru a stoca puterile lui 10 }
+n := 0; { Vom creea numarul tot in 'n' }
+put := 1; { Folosim 'put'  pentru a stoca puterile lui 10 }
 for i := 1 to nr_cif do
     begin
     n := n + v[i]*put;
