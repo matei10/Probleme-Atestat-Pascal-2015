@@ -38,6 +38,11 @@ var c :integer;
 begin
 suma_cif := 0;
 
+{ deoarece noi calculam suma cifrelor cazul in care numarul e negativ ne
+  incurca si de asta in transformam intr-un numar negativ 
+  <abs(x)> -> returneaza modulul lui <x>, abs = absolut }
+x := abs(x);
+
 while x > 0 do
     begin
     c := x mod 10;
